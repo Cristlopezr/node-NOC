@@ -12,7 +12,7 @@ export class Server {
     public static start() {
         console.log('Server started');
 
-        new SendEmailLogs(emailService, fileSystemLogRepository).execute(['']);
+        /* new SendEmailLogs(emailService, fileSystemLogRepository).execute(['']); */
         CronService.createJob('*/5 * * * * *', () => {
             const url = 'https://google.com';
             /* const url = 'http://localhost:3000'; */
